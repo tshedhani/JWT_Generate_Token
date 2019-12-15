@@ -9,22 +9,22 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="login_Iinfo", schema = "spring")
+@Table(name="logininfo", schema = "spring")
 public class LoginInfo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	@Id
-	@Column(name = "login_id")
+	@Column(name = "idlogininfo")
 	private Integer loginId;
 
-	@Column(name = "login_name")
+	@Id
+	@Column(name = "username")
 	private String loginName;
 
-	@Column(name = "login_password")
+	@Column(name = "password")
 	private String loginPassword;
 
-	@Column(name = "login_updated_date")
+	@Column(name = "logininfoupdated", columnDefinition = "datetime")
 	private Date loginUpdatedDate;
 
 	public Integer getLoginId() {
